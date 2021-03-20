@@ -1,6 +1,8 @@
 <template>
   <nav class="w-screen h-14 bg-black flex flex-row flex-nowrap items-center">
-    <h1 class="ml-14 text-white text-xl">{{ title }}</h1>
+    <h1 class="ml-14 text-white text-xl">
+      <router-link to='/'>{{ title }}</router-link>
+    </h1>
     <div class="flex-grow"></div>
     <MsgNotification />
     <NameProfile />
