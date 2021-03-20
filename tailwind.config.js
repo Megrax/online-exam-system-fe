@@ -2,7 +2,14 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+      startPractice: '#2a9b26',
+      startExam: '#d33630',
+      practiceAnalysis: '#361aa1',
+      examRecord: '#db8134',
+    },
+    },
   },
   variants: {
     extend: {},
