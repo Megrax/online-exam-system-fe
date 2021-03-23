@@ -78,8 +78,6 @@ export default {
       .then((json) => {
         this.questions = json
         this.generateUserAnswers()
-        console.log(this.questions)
-        console.log(this.userAnswers)
       })
 
   },
