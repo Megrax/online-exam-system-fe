@@ -31,6 +31,11 @@ const routes = [
     path: '/exam-record',
     name: 'ExamRecord',
     component: () => import('../views/ExamRecord.vue')
+  },
+  {
+    path: '/single-choice',
+    name: 'SingleChoice',
+    component: () => import('@/components/SingleChoice.vue')
   }
 ]
 
