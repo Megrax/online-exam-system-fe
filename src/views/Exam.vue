@@ -26,11 +26,13 @@ export default {
       },
       cardInfo1: {
         title: 'web前端开发技术课程小测',
-        btnTitle: '开始' + '考试'
+        btnTitle: '开始' + '考试',
+        btnTarget: '/test/' + 'e01'
       },
       cardInfo2: {
         title: 'web前端开发技术期末考试',
-        btnTitle: '开始' + '考试'
+        btnTitle: '开始' + '考试',
+        btnTarget: '/test/' + 'e02'
       }
     }
   },

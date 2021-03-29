@@ -23,7 +23,8 @@ export default {
       },
       cardInfo: {
         title: '前端知识自测',
-        btnTitle: '开始' + '练习'
+        btnTitle: '开始' + '练习',
+        btnTarget: '/test/' + 'p01'
       }
     }
   },
