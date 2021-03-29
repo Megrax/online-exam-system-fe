@@ -13,7 +13,7 @@
           </li>
           <li class="flex flex-col flex-nowrap justify-around items-center w-5/6 min-h-full ml-32 mr-32 border shadow-md">
             <div class="pl-6 pr-5 pt-4">
-              <span>{{ questions[currIndex].id }}</span>
+              <span>{{ questions[currIndex].sid }}</span>
               <i>.</i>
               <span>{{ questions[currIndex].question }}</span>
             </div>
@@ -44,7 +44,7 @@
         </div>
       </main>
       <ul class="flex flex-row flex-nowrap gap-x-2 justify-center items-center w-screen mt-52">
-        <li @click="handleTabClick(question.id)" v-for="question in questions" :key="question.id" class="flex justify-center items-center w-8 h-8 bg-gray-200 rounded-full cursor-pointer" :class="{ 'btn-selected': (parseInt(question.id) === currIndex + 1) }">{{ question.id }}</li>
+        <li @click="handleTabClick(question.sid)" v-for="question in questions" :key="question.id" class="flex justify-center items-center w-8 h-8 bg-gray-200 rounded-full cursor-pointer" :class="{ 'btn-selected': (parseInt(question.sid) === currIndex + 1) }">{{ question.sid }}</li>
       </ul>
     </div>
   </div>
@@ -77,7 +77,8 @@ export default {
     }
   },
   mounted() {
-    const url = 'http://feeling.cheerful.today:3000/data'
+    // const url = 'http://feeling.cheerful.today:3000/data'
+    const url = 'http://101.37.116.37:3000/get_questions1'
     fetch(url)
       .then(res => {
         if (res.ok) {
@@ -87,8 +88,9 @@ export default {
           this.fetchSuccess = false
         }
       })
-      .then(json => {
-        this.questions = json
+      .then(data => {
+        this.questions = data
+        data = this.addSeriesId(data, data.length)
         this.generateUserAnswers()
       })
   },
@@ -121,8 +123,14 @@ export default {
         alert(msg)
       }
     },
-    handleTabClick(id) {
-      this.currIndex = id - 1
+    handleTabClick(sid) {
+      this.currIndex = sid - 1
+    },
+    addSeriesId(questions, len) {
+      for (let index = 1; index <= len; index++) {
+        questions[index - 1]['sid'] = index
+      }
+      return questions
     },
     generateUserAnswers() {
       let obj = {
