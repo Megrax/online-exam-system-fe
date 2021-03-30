@@ -3,5 +3,13 @@
 }
 
 .btn-selected {
-	@apply bg-startPractice text-white;
+	@apply bg-practiceAnalysis text-white;
+}
+
+.right-answer {
+	@apply text-rightAnswer;
+}
+
+.wrong-answer {
+	@apply text-wrongAnswer;
 }

@@ -18,7 +18,7 @@
               <span>{{ questions[currIndex].question }}</span>
             </div>
             <ul class="flex flex-col justify-around pt-5 pb-5">
-              <li v-for="option in questions[currIndex].options" :key="option.id" class="flex flex-row items-center justify-start w-96 pt-2">
+              <li v-for="option in questions[currIndex].options" :key="option.id" class="flex flex-row items-center justify-start w-96 mt-2 pl-4" :class="{ 'right-answer': option.id === answers[currIndex], 'wrong-answer': option.id === checkedAnswers[currIndex].answer && option.id !== answers[currIndex] }">
                 <label class="cursor-pointer">
                   <input type="radio" :value="option.id" v-model="userAnswers[currIndex].answer" id="radio">
                   <span class="ml-5">
@@ -38,9 +38,9 @@
           </li>
         </ul>
         <div class="flex flex-row flex-nowrap justify-around items-center w-11/12 h-24 mt-8">
-          <button class="flex items-center justify-center w-32 h-10 bg-startPractice text-white" :class="{'btn-disabled': (prevDisabled || currIndex === 0)}" @click="handlePrevClick">{{ prevQ }}</button>
-          <button class="flex items-center justify-center w-32 h-10 bg-startPractice text-white" :class="{'btn-disabled': (nextDisabled || currIndex === questions.length - 1 )}" @click="handleNextClick">{{ nextQ }}</button>
-          <button class="flex items-center justify-center w-32 h-10 bg-startPractice text-white" :class="{'btn-disabled': currIndex !== questions.length - 1 }" @click="handleSubmit">{{ submit }}</button>
+          <button class="flex items-center justify-center w-32 h-10 bg-practiceAnalysis text-white" :class="{'btn-disabled': (prevDisabled || currIndex === 0)}" @click="handlePrevClick">{{ prevQ }}</button>
+          <button class="flex items-center justify-center w-32 h-10 bg-practiceAnalysis text-white" :class="{'btn-disabled': (nextDisabled || currIndex === questions.length - 1 )}" @click="handleNextClick">{{ nextQ }}</button>
+          <button class="flex items-center justify-center w-32 h-10 bg-practiceAnalysis text-white" :class="{'btn-disabled': currIndex !== questions.length - 1 }" @click="handleSubmit">{{ submit }}</button>
         </div>
       </main>
       <ul class="flex flex-row flex-nowrap gap-x-2 justify-center items-center w-screen mt-52">
@@ -61,6 +61,7 @@ export default {
       fetchSuccess: false,
       currIndex: 0,
       userAnswers: [],
+      checkedAnswers: [],
       /* 基础构件 */
       prevQ: '上一题',
       nextQ: '下一题',
@@ -73,7 +74,8 @@ export default {
       practiceFullMarks: '100分',
       countdown: '剩余时间：',
       /* 题目信息 */
-      questions: []
+      questions: [],
+      answers: []
     }
   },
   mounted() {
@@ -92,6 +94,7 @@ export default {
         this.questions = data
         data = this.addSeriesId(data, data.length)
         this.generateUserAnswers()
+        this.generateCheckedAnswers()
       })
   },
   methods: {
@@ -121,6 +124,9 @@ export default {
         }
         let msg = `你提交的答案是：${result}`
         alert(msg)
+        this.showRightAnswers()
+        this.checkedAnswers = [...this.userAnswers]
+        this.currIndex = 0
       }
     },
     handleTabClick(sid) {
@@ -145,7 +151,17 @@ export default {
         obj.id = item.id
         this.userAnswers.push(obj)
       }
-    }
+    },
+    generateCheckedAnswers() {
+      for (let index = 0; index < this.questions.length; index++) {
+        this.checkedAnswers.push('')
+      }
+    },
+    showRightAnswers() {
+      for (const [index, question] of this.questions.entries()) {
+        this.answers[index] = question.answer
+      }
+    },
   },
   components: {
     Countdown,
