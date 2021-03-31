@@ -122,8 +122,8 @@ export default {
         for (const answer of this.userAnswers) {
           result.push(answer.answer)
         }
-        let msg = `你提交的答案是：${result}`
-        alert(msg)
+        // let msg = `你提交的答案是：${result}`
+        // alert(msg)
         this.showRightAnswers()
         this.checkedAnswers = [...this.userAnswers]
         this.currIndex = 0
