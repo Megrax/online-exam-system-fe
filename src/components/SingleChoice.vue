@@ -1,7 +1,10 @@
 <template>
   <div class="flex flex-col justify-center items-center">
     <transition name="fade">
-      <Loading class="mt-40" v-if="!fetchSuccess"></Loading>
+      <Loading
+        class="mt-40"
+        v-if="!fetchSuccess"
+      ></Loading>
     </transition>
     <div v-if="fetchSuccess">
       <main class="flex flex-col flex-nowrap justify-center items-center h-96">
@@ -18,9 +21,19 @@
               <span>{{ questions[currIndex].question }}</span>
             </div>
             <ul class="flex flex-col justify-around pt-5 pb-5">
-              <li v-for="option in questions[currIndex].options" :key="option.id" class="flex flex-row items-center justify-start w-96 mt-2 pl-4" :class="{ 'right-answer': option.id === answers[currIndex], 'wrong-answer': option.id === checkedAnswers[currIndex].answer && option.id !== answers[currIndex] }">
+              <li
+                v-for="option in questions[currIndex].options"
+                :key="option.id"
+                class="flex flex-row items-center justify-start w-96 mt-2 pl-4"
+                :class="{ 'right-answer': option.id === answers[currIndex], 'wrong-answer': option.id === checkedAnswers[currIndex].answer && option.id !== answers[currIndex] }"
+              >
                 <label class="cursor-pointer">
-                  <input type="radio" :value="option.id" v-model="userAnswers[currIndex].answer" id="radio">
+                  <input
+                    type="radio"
+                    :value="option.id"
+                    v-model="userAnswers[currIndex].answer"
+                    id="radio"
+                  >
                   <span class="ml-5">
                     <span>{{ option.id }}</span>
                     <i>.</i>
@@ -32,19 +45,42 @@
           </li>
           <li class="flex flex-col flex-nowrap items-center justify-center w-48 h-36">
             <p>{{ countdown }}</p>
-            <Countdown :time="3600" :step="1" format="hh:mm:ss" class="text-2xl mt-4">
+            <Countdown
+              :time="3600"
+              :step="1"
+              format="hh:mm:ss"
+              class="text-2xl mt-4"
+            >
               <template slot-scope="{ time }">{{ time }}</template>
             </Countdown>
           </li>
         </ul>
         <div class="flex flex-row flex-nowrap justify-around items-center w-11/12 h-24 mt-8">
-          <button class="flex items-center justify-center w-32 h-10 bg-practiceAnalysis text-white" :class="{'btn-disabled': (prevDisabled || currIndex === 0)}" @click="handlePrevClick">{{ prevQ }}</button>
-          <button class="flex items-center justify-center w-32 h-10 bg-practiceAnalysis text-white" :class="{'btn-disabled': (nextDisabled || currIndex === questions.length - 1 )}" @click="handleNextClick">{{ nextQ }}</button>
-          <button class="flex items-center justify-center w-32 h-10 bg-practiceAnalysis text-white" :class="{'btn-disabled': currIndex !== questions.length - 1 }" @click="handleSubmit">{{ submit }}</button>
+          <button
+            class="flex items-center justify-center w-32 h-10 bg-practiceAnalysis text-white"
+            :class="{'btn-disabled': (prevDisabled || currIndex === 0)}"
+            @click="handlePrevClick"
+          >{{ prevQ }}</button>
+          <button
+            class="flex items-center justify-center w-32 h-10 bg-practiceAnalysis text-white"
+            :class="{'btn-disabled': (nextDisabled || currIndex === questions.length - 1 )}"
+            @click="handleNextClick"
+          >{{ nextQ }}</button>
+          <button
+            class="flex items-center justify-center w-32 h-10 bg-practiceAnalysis text-white"
+            :class="{'btn-disabled': currIndex !== questions.length - 1 }"
+            @click="handleSubmit"
+          >{{ submit }}</button>
         </div>
       </main>
       <ul class="flex flex-row flex-nowrap gap-x-2 justify-center items-center w-screen mt-52">
-        <li @click="handleTabClick(question.sid)" v-for="question in questions" :key="question.id" class="flex justify-center items-center w-8 h-8 bg-gray-200 rounded-full cursor-pointer" :class="{ 'btn-selected': (parseInt(question.sid) === currIndex + 1) }">{{ question.sid }}</li>
+        <li
+          @click="handleTabClick(question.sid)"
+          v-for="question in questions"
+          :key="question.id"
+          class="flex justify-center items-center w-8 h-8 bg-gray-200 rounded-full cursor-pointer"
+          :class="{ 'btn-selected': (parseInt(question.sid) === currIndex + 1) }"
+        >{{ question.sid }}</li>
       </ul>
     </div>
   </div>
@@ -80,7 +116,8 @@ export default {
   },
   mounted() {
     // const url = 'http://feeling.cheerful.today:3000/data'
-    const url = 'http://101.37.116.37:3000/get_questions1'
+    // const url = 'http://101.37.116.37:3000/get_questions1'
+    const url = 'http://101.37.116.37:4000/get_random_10questions'
     fetch(url)
       .then(res => {
         if (res.ok) {

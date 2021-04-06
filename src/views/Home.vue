@@ -1,7 +1,13 @@
 <template>
   <div class="home">
-    <Entry class="mt-20 ml-28" :info="startLearning"></Entry>
-    <Entry class="mt-20 ml-28" :info="checkOutInfo"></Entry>
+    <Entry
+      class="mt-20 ml-28"
+      :info="startLearning"
+    ></Entry>
+    <Entry
+      class="mt-20 ml-28"
+      :info="checkOutInfo"
+    ></Entry>
   </div>
 </template>
 

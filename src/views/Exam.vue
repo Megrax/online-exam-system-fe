@@ -2,8 +2,14 @@
   <div>
     <ContentDisplay :info='sectionInfo'></ContentDisplay>
     <div class="flex flex-row flex-nowrap">
-      <Content class="mt-10 ml-36" :info='cardInfo1'></Content>
-      <Content class="mt-10 ml-36" :info='cardInfo2'></Content>
+      <Content
+        class="mt-10 ml-36"
+        :info='cardInfo1'
+      ></Content>
+      <Content
+        class="mt-10 ml-36"
+        :info='cardInfo2'
+      ></Content>
     </div>
   </div>
 </template>

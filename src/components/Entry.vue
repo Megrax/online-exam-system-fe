@@ -6,10 +6,16 @@
     </div>
     <div class="flex mt-20 items-center">
       <router-link :to='info.firstLink'>
-        <div class="flex w-48 h-32 rounded-lg text-white text-2xl justify-center items-center" :class='info.firstBgColor'>{{ info.firstEntry }}</div>
+        <div
+          class="flex w-48 h-32 rounded-lg text-white text-2xl justify-center items-center"
+          :class='info.firstBgColor'
+        >{{ info.firstEntry }}</div>
       </router-link>
       <router-link :to='info.secondLink'>
-        <div class="flex w-48 h-32 ml-16 rounded-lg text-white text-2xl justify-center items-center" :class='info.secondBgColor'>{{ info.secondEntry }}</div>
+        <div
+          class="flex w-48 h-32 ml-16 rounded-lg text-white text-2xl justify-center items-center"
+          :class='info.secondBgColor'
+        >{{ info.secondEntry }}</div>
       </router-link>
     </div>
   </div>

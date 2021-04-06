@@ -1,7 +1,10 @@
 <template>
   <div>
     <ContentDisplay :info='sectionInfo'></ContentDisplay>
-    <Content class="mt-10 ml-36" :info='cardInfo'></Content>
+    <Content
+      class="mt-10 ml-36"
+      :info='cardInfo'
+    ></Content>
   </div>
 </template>
 
