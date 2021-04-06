@@ -6,31 +6,33 @@
     <div class="flex-grow"></div>
     <MsgNotification />
     <NameProfile />
-    <Avatar :username=userName :size=30 :customStyle=avatarStyle></Avatar>
+    <router-link to='/PersonCenter'>
+      <Avatar :username=userName :size=30 :customStyle=avatarStyle></Avatar>
+    </router-link>
   </nav>
 </template>
 
 <script>
-import Avatar from 'vue-avatar'
-import MsgNotification from '@/components/MsgNotification.vue'
-import NameProfile from '@/components/NameProfile.vue'
+  import Avatar from 'vue-avatar'
+  import MsgNotification from '@/components/MsgNotification.vue'
+  import NameProfile from '@/components/NameProfile.vue'
 
-export default {
-  data() {
-    return {
-      title: '前端在线考试系统',
-      userName: '张三',
-      avatarStyle: {
-        marginRight: '40px'
+  export default {
+    data() {
+      return {
+        title: '前端在线考试系统',
+        userName: '张三',
+        avatarStyle: {
+          marginRight: '40px'
+        }
       }
+    },
+    components: {
+      MsgNotification,
+      NameProfile,
+      Avatar
     }
-  },
-  components: {
-    MsgNotification,
-    NameProfile,
-    Avatar
   }
-}
 </script>
 
 <style>

@@ -36,7 +36,12 @@ const routes = [
     path: '/test/:id',
     name: 'Test',
     component: () => import('@/components/SingleChoice.vue')
-  }
+  },
+  {
+    path: '/PersonCenter',
+    name: 'personalCenter',
+    component: () => import('@/components/PersonalCenter.vue')
+  },
 ]
 
 const router = new VueRouter({
