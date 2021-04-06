@@ -10,7 +10,8 @@ module.exports = {
       examRecord: '#db8134',
       greyText: '#999B9C',
       rightAnswer: '#2a9b26',
-      wrongAnswer: '#d33630'
+      wrongAnswer: '#d33630',
+      submit: '#2a9b26',
       }
     },
   },
