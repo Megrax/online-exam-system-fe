@@ -16,7 +16,6 @@ function generateGreeting() {
   return greeting
 }
 
-
 module.exports = {
   generateGreeting
 }

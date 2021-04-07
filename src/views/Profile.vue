@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-20 ml-40">
+  <div class="mt-16 ml-40 mb-24">
     <p class="text-greyText text-1">{{ this.tips.main }}</p>
     <div class="mt-5">
       <h1 class="text-2xl">{{ this.sectionInfo.basicInfo }}</h1>
