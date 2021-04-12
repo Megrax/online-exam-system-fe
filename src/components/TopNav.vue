@@ -5,10 +5,10 @@
     </h1>
     <div class="flex-grow"></div>
     <MsgNotification />
-    <router-link to='/profile'>
+    <router-link to='/Profile'>
       <NameProfile />
     </router-link>
-    <router-link to='/profile'>
+    <router-link to='/Profile'>
       <Avatar
         :username=userName
         :size=30
