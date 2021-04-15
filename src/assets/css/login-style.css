@@ -1,0 +1,495 @@
+.form-basic {
+	background-color: #ffffff;
+	justify-content: center;
+	display: inline-flex;
+}
+
+.title {
+	color: #383838;
+	font-size: 30px;
+}
+
+.form-content {
+	width: 100%;
+	display: block;
+}
+
+.login-bg,
+.login-bg-plain {
+	height: 100%;
+	width: 100%;
+	background-attachment: scroll;
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	-webkit-transition: background 2s;
+	-moz-transition: background 2s;
+	-o-transition: background 2s;
+	transition: background 2s;
+}
+
+.login-bg {
+	background-color: #1a1a1a;
+}
+
+.login-bg-plain {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	background-color: #ffffff;
+}
+
+.stain {
+	background: white url(../images/stain.png) no-repeat 53% 58%;
+}
+
+.stain-img {
+	width: 60rem;
+	height: 24rem;
+	margin-top: 3rem;
+	margin-left: -4rem;
+	display: inline-block;
+	position: absolute;
+	-moz-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+	filter: FlipH;
+	-ms-filter: 'FlipH';
+	content: url(../images/stain.png);
+}
+
+#page,
+#payments {
+	height: 98%;
+	margin: 1%;
+}
+* {
+	font-family: 'Century Gothic', 'Microsoft yahei';
+}
+#signup,
+#signup-verify,
+#login,
+#password-recovery,
+#clients-area {
+	font-family: 'Century Gothic', 'Microsoft yahei';
+	color: #383838;
+	font-size: 14px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+	width: 550px;
+	margin: auto;
+}
+#signup .login-footer,
+#signup .login-header,
+#signup-verify .login-footer,
+#signup-verify .login-header,
+#login .login-footer,
+#login .login-header,
+#password-recovery .login-footer,
+#password-recovery .login-header,
+#clients-area .login-footer,
+#clients-area .login-header {
+	text-align: center;
+}
+#signup .login-header,
+#signup-verify .login-header,
+#login .login-header,
+#password-recovery .login-header,
+#clients-area .login-header {
+	padding: 80px 0 0;
+	-webkit-border-radius: 4px 4px 0 0;
+	-moz-border-radius: 4px 4px 0 0;
+	border-radius: 4px 4px 0 0;
+}
+#signup .login-footer,
+#signup-verify .login-footer,
+#login .login-footer,
+#password-recovery .login-footer,
+#clients-area .login-footer {
+	background-color: #fafafa;
+	padding: 32px 0;
+	-webkit-border-radius: 0 0 4px 4px;
+	-moz-border-radius: 0 0 4px 4px;
+	border-radius: 0 0 4px 4px;
+	color: #999999;
+}
+#signup .login-footer .login-link,
+#signup-verify .login-footer .login-link,
+#login .login-footer .login-link,
+#password-recovery .login-footer .login-link,
+#clients-area .login-footer .login-link {
+	color: #26c644;
+}
+#signup .logo,
+#signup-verify .logo,
+#login .logo,
+#password-recovery .logo,
+#clients-area .logo {
+	width: 180px;
+	height: 35.8px;
+	margin: 0 auto;
+}
+#signup .logo span,
+#signup-verify .logo span,
+#login .logo span,
+#password-recovery .logo span,
+#clients-area .logo span {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+#signup form,
+#signup-verify form,
+#login form,
+#password-recovery form,
+#clients-area form {
+	padding: 40px 100px 0;
+}
+#signup form td input,
+#signup-verify form td input,
+#login form td input,
+#password-recovery form td input,
+#clients-area form td input {
+	width: 100%;
+}
+#signup .oauth2form,
+#signup-verify .oauth2form,
+#login .oauth2form,
+#password-recovery .oauth2form,
+#clients-area .oauth2form {
+	padding: 0 100px;
+}
+#signup form:last-of-type,
+#signup-verify form:last-of-type,
+#login form:last-of-type,
+#password-recovery form:last-of-type,
+#clients-area form:last-of-type {
+	padding-bottom: 30px;
+}
+#signup .logo .color,
+#signup-verify .logo .color,
+#login .logo .color,
+#password-recovery .logo .color,
+#clients-area .logo .color {
+	background: transparent url(../images/logox.png) no-repeat center center;
+}
+#signup .page-title,
+#signup-verify .page-title,
+#login .page-title,
+#password-recovery .page-title,
+#clients-area .page-title {
+	font-size: 30px;
+	padding-bottom: 16px;
+	text-align: center;
+	color: #383838;
+}
+#signup .password-title,
+#signup-verify .password-title,
+#login .password-title,
+#password-recovery .password-title,
+#clients-area .password-title {
+	padding: 15px 30px 5px 30px;
+	text-align: center;
+}
+#signup .page-title-small,
+#signup-verify .page-title-small,
+#login .page-title-small,
+#password-recovery .page-title-small,
+#clients-area .page-title-small {
+	font-size: 14px;
+	padding-bottom: 16px;
+	text-align: center;
+	color: #999999;
+	line-height: 1.5;
+}
+#signup a,
+#signup-verify a,
+#login a,
+#password-recovery a,
+#clients-area a {
+	color: #26c644;
+	text-decoration: none;
+}
+#signup a:hover,
+#signup-verify a:hover,
+#login a:hover,
+#password-recovery a:hover,
+#clients-area a:hover {
+	text-decoration: underline;
+}
+#signup *,
+#signup-verify *,
+#login *,
+#password-recovery *,
+#clients-area * {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#signup table,
+#signup-verify table,
+#login table,
+#password-recovery table,
+#clients-area table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+}
+#signup td,
+#signup-verify td,
+#login td,
+#password-recovery td,
+#clients-area td {
+	padding: 0 0 20px;
+}
+#signup td.remember-me-td,
+#signup-verify td.remember-me-td,
+#login td.remember-me-td,
+#password-recovery td.remember-me-td,
+#clients-area td.remember-me-td {
+	color: #383838;
+	display: flex;
+	padding: 0 0 19px;
+	justify-content: space-between;
+}
+#signup .remember-me,
+#signup-verify .remember-me,
+#login .remember-me,
+#password-recovery .remember-me,
+#clients-area .remember-me {
+	display: inline-block;
+	padding-left: 15px;
+	text-indent: -15px;
+}
+#signup .remember-me input,
+#signup-verify .remember-me input,
+#login .remember-me input,
+#password-recovery .remember-me input,
+#clients-area .remember-me input {
+	width: 14px;
+	height: 14px;
+	padding: 0;
+	margin: 0 5px 0 0;
+	vertical-align: middle;
+	position: relative;
+	top: -1px;
+	*overflow: hidden;
+}
+#signup *:focus,
+#signup-verify *:focus,
+#login *:focus,
+#password-recovery *:focus,
+#clients-area *:focus {
+	outline: none;
+}
+#signup input[type='submit'],
+#signup-verify input[type='submit'],
+#login input[type='submit'],
+#password-recovery input[type='submit'],
+#clients-area input[type='submit'] {
+	margin-left: 0px;
+}
+#signup input[type='submit'],
+#signup-verify input[type='submit'],
+#login input[type='submit'],
+#password-recovery input[type='submit'],
+#clients-area input[type='submit'] {
+	-webkit-box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+	box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+	height: 45px;
+	font-size: 14px;
+	color: #ffffff;
+	padding: 0 18px;
+	background-color: #34c950;
+	border: none;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+#signup input[type='submit']:hover,
+#signup-verify input[type='submit']:hover,
+#login input[type='submit']:hover,
+#password-recovery input[type='submit']:hover,
+#clients-area input[type='submit']:hover {
+	background-color: #00c224;
+	border-color: #2acb48;
+	-webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.1);
+}
+#signup input[type='submit'].login-btn,
+#signup-verify input[type='submit'].login-btn,
+#login input[type='submit'].login-btn,
+#password-recovery input[type='submit'].login-btn,
+#clients-area input[type='submit'].login-btn {
+	width: 100%;
+}
+#signup input[type='submit'].google-btn,
+#signup-verify input[type='submit'].google-btn,
+#login input[type='submit'].google-btn,
+#password-recovery input[type='submit'].google-btn,
+#clients-area input[type='submit'].google-btn {
+	width: 100%;
+	color: #777;
+	background-size: 18px;
+	background-color: #fff;
+	border: 1px solid #ebebeb;
+	-webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+	box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+}
+#signup input[type='submit'].google-btn:hover,
+#signup-verify input[type='submit'].google-btn:hover,
+#login input[type='submit'].google-btn:hover,
+#password-recovery input[type='submit'].google-btn:hover,
+#clients-area input[type='submit'].google-btn:hover {
+	background-color: #fff;
+	border: 1px solid #4385f4;
+	-webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+}
+#signup input[type='submit'].github-btn,
+#signup-verify input[type='submit'].github-btn,
+#login input[type='submit'].github-btn,
+#password-recovery input[type='submit'].github-btn,
+#clients-area input[type='submit'].github-btn {
+	width: 100%;
+	background-color: #2a2a2a;
+	border: 1px solid #2a2a2a;
+}
+#signup input[type='submit'].github-btn:hover,
+#signup-verify input[type='submit'].github-btn:hover,
+#login input[type='submit'].github-btn:hover,
+#password-recovery input[type='submit'].github-btn:hover,
+#clients-area input[type='submit'].github-btn:hover {
+	background-color: #3a3a3a;
+	border-color: #3a3a3a;
+	-webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+}
+#signup input[type='submit'].signup-btn,
+#signup-verify input[type='submit'].signup-btn,
+#login input[type='submit'].signup-btn,
+#password-recovery input[type='submit'].signup-btn,
+#clients-area input[type='submit'].signup-btn {
+	width: 100%;
+}
+#signup input[type='submit']:active,
+#signup-verify input[type='submit']:active,
+#login input[type='submit']:active,
+#password-recovery input[type='submit']:active,
+#clients-area input[type='submit']:active {
+	-webkit-box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.2),
+		0px 1px 1px 0px rgba(0, 0, 0, 0.16);
+	-moz-box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.2),
+		0px 1px 1px 0px rgba(0, 0, 0, 0.16);
+	box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.2),
+		0px 1px 1px 0px rgba(0, 0, 0, 0.16);
+}
+#signup .sign-up-btn,
+#signup-verify .sign-up-btn,
+#login .sign-up-btn,
+#password-recovery .sign-up-btn,
+#clients-area .sign-up-btn {
+	-webkit-box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+	box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+	height: 45px;
+	text-decoration: none;
+	color: #383838;
+	padding: 11px 19px 10px 19px;
+	background-color: #f4f4f4;
+	border: 1px solid #dbdbdb;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+	cursor: pointer;
+	font-size: 12px;
+}
+#signup .sign-up-btn:hover,
+#signup-verify .sign-up-btn:hover,
+#login .sign-up-btn:hover,
+#password-recovery .sign-up-btn:hover,
+#clients-area .sign-up-btn:hover {
+	background-color: #eaeaea;
+	border-color: #d1d1d1;
+	-webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.1);
+}
+#signup .sign-up-btn:active,
+#signup-verify .sign-up-btn:active,
+#login .sign-up-btn:active,
+#password-recovery .sign-up-btn:active,
+#clients-area .sign-up-btn:active {
+	-webkit-box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.07),
+		rgba(0, 0, 0, 0.06) 0px 1px 1px 0px;
+	-moz-box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.07),
+		rgba(0, 0, 0, 0.06) 0px 1px 1px 0px;
+	box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.07),
+		rgba(0, 0, 0, 0.06) 0px 1px 1px 0px;
+}
+#signup input[type='text'],
+#signup-verify input[type='text'],
+#login input[type='text'],
+#password-recovery input[type='text'],
+#clients-area input[type='text'] {
+	font-family: 'Century Gothic', 'Microsoft yahei';
+}
+#signup input[type='text'],
+#signup input[type='password'],
+#signup-verify input[type='text'],
+#signup-verify input[type='password'],
+#login input[type='text'],
+#login input[type='password'],
+#password-recovery input[type='text'],
+#password-recovery input[type='password'],
+#clients-area input[type='text'],
+#clients-area input[type='password'] {
+	font-size: 14px;
+	height: 45px;
+	margin: 0px;
+	padding: 0px 7px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #dbdbdb;
+	background-color: #ffffff;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+	width: 100%;
+}
+#signup input[type='text']:focus,
+#signup input[type='password']:focus,
+#signup-verify input[type='text']:focus,
+#signup-verify input[type='password']:focus,
+#login input[type='text']:focus,
+#login input[type='password']:focus,
+#password-recovery input[type='text']:focus,
+#password-recovery input[type='password']:focus,
+#clients-area input[type='text']:focus,
+#clients-area input[type='password']:focus {
+	border: 1px solid #34c950;
+}

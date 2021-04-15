@@ -4,9 +4,11 @@ import 'tailwindcss/tailwind.css'
 import '@/assets/css/iconfonts.css'
 import '@/assets/css/main.css'
 import router from './router'
+import axios from 'axios'
 
 
 Vue.config.productionTip = false
+Vue.prototype.axios = axios
 
 new Vue({
   router,

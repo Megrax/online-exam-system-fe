@@ -10,6 +10,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '@/views/Home.vue')
   },
   {
+    path: '/login',
+    name: 'Login',
+    component: () => import('@/views/Login.vue')
+  },
+  {
     path: '/practice',
     name: 'Practice',
     // route level code-splitting
@@ -38,7 +43,7 @@ const routes = [
     component: () => import('@/components/SingleChoice.vue')
   },
   {
-    path: '/Profile',
+    path: '/profile',
     name: 'Profile',
     component: () => import('@/views/Profile.vue')
   },
@@ -46,7 +51,12 @@ const routes = [
     path: '/notification',
     name: 'Notification',
     component: () => import('@/views/Notification.vue')
-  }
+  },
+  // {
+  //   path: '/upload',
+  //   name: 'Upload',
+  //   component: ()=>import('@/views/UploadQuestions.vue')
+  // }
 ]
 
 const router = new VueRouter({

@@ -1,11 +1,13 @@
 <template>
   <div>
+    <TopNav></TopNav>
     <ContentDisplay :info='sectionInfo'></ContentDisplay>
   </div>
 </template>
 
 <script>
 import ContentDisplay from '@/components/ContentDisplay.vue'
+import TopNav from '@/components/TopNav.vue'
 import { generateGreeting } from '@/scripts/functions.js'
 
 export default {
@@ -21,6 +23,7 @@ export default {
     }
   },
   components: {
+    TopNav,
     ContentDisplay
   }
 }

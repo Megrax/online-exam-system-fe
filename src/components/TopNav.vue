@@ -5,10 +5,10 @@
     </h1>
     <div class="flex-grow"></div>
     <MsgNotification />
-    <router-link to='/Profile'>
+    <router-link to='/profile'>
       <NameProfile />
     </router-link>
-    <router-link to='/Profile'>
+    <router-link to='/profile'>
       <Avatar
         :username=userName
         :size=30
@@ -26,7 +26,7 @@ import NameProfile from '@/components/NameProfile.vue'
 export default {
   data() {
     return {
-      title: '前端在线考试系统',
+      title: '前端在线答题系统',
       userName: '张三',
       avatarStyle: {
         marginRight: '40px'

@@ -1,26 +1,44 @@
 <template>
   <div>
-    <Showprofile v-if="!ifChange">显示信息</Showprofile>
-    <Writeprofile v-if="ifChange">修改信息</Writeprofile>
+    <TopNav></TopNav>
+    <Showprofile
+      v-if="!ifEdit"
+      :data="ifEdit"
+      @to-edit="handleToEdit"
+    >显示信息</Showprofile>
+    <EditProfile
+      v-if="ifEdit"
+      :data="ifEdit"
+      @finish-edit="handleFinishEdit"
+    >修改信息</EditProfile>
   </div>
 </template>
 
 <script>
 import Showprofile from '@/components/Showprofile.vue'
-import Writeprofile from '@/components/Writeprofile.vue'
+import EditProfile from '@/components/EditProfile.vue'
+import TopNav from '@/components/TopNav.vue'
 
 export default {
   name: 'PersonalCenter',
   data() {
     return {
-      ifChange:false,
+      ifEdit: false,
+    }
+  }, methods: {
+    handleToEdit(params) {
+      this.ifEdit = params
+    },
+    handleFinishEdit(params) {
+      this.ifEdit = params
     }
   },
-  components:{
+  components: {
+    TopNav,
     Showprofile,
-    Writeprofile
-    }
+    EditProfile
   }
+}
 </script>
 
 <style scoped>
