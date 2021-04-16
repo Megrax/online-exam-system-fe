@@ -1,5 +1,6 @@
 <template>
   <div class="flex flex-col justify-center items-center">
+    <TopNav></TopNav>
     <transition name="fade">
       <Loading
         class="mt-40"
@@ -89,6 +90,7 @@
 <script>
 import Countdown from '@choujiaojiao/vue2-countdown'
 import Loading from '@/components/loading'
+import TopNav from '@/components/TopNav.vue'
 
 export default {
   data() {
@@ -201,6 +203,7 @@ export default {
     },
   },
   components: {
+    TopNav,
     Countdown,
     Loading
   }

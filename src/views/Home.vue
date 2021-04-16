@@ -1,19 +1,29 @@
 <template>
-  <div class="home">
-    <Entry
-      class="mt-20 ml-28"
-      :info="startLearning"
-    ></Entry>
-    <Entry
-      class="mt-20 ml-28"
-      :info="checkOutInfo"
-    ></Entry>
+  <div class="home absolute">
+
+    <TopNav></TopNav>
+    <main>
+      <Entry
+        class="mt-20 ml-28"
+        :info="startLearning"
+      ></Entry>
+      <Entry
+        class="mt-20 ml-28"
+        :info="checkOutInfo"
+      ></Entry>
+    </main>
+    <a href="localhost/upload.html">
+      <aside class="fixed right-24 bottom-24 flex justify-center items-center w-12 h-12 rounded-full shadow-lg bg-startPractice">
+        <span class="icon-upload text-white text-xl"></span>
+      </aside>
+    </a>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import Entry from '@/components/Entry.vue'
+import TopNav from '@/components/TopNav.vue'
 
 export default {
   name: 'Home',
@@ -42,6 +52,8 @@ export default {
     }
   },
   components: {
+
+    TopNav,
     Entry
   }
 }

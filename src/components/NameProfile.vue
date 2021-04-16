@@ -1,4 +1,4 @@
-<template>
+  <template>
   <span class="mr-2">
     <span class="text-sm text-white mr-1">{{ userName }}</span>
   </span>
