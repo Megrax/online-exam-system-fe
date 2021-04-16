@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <TopNav></TopNav>
     <router-view></router-view>
   </div>
 </template>
@@ -9,7 +8,6 @@
 </style>
 
 <script>
-import TopNav from '@/components/TopNav.vue'
 
 export default {
   data() {
@@ -17,7 +15,6 @@ export default {
     }
   },
   components: {
-    TopNav
   }
 }
 </script>

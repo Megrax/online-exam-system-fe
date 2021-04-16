@@ -26,7 +26,7 @@ import NameProfile from '@/components/NameProfile.vue'
 export default {
   data() {
     return {
-      title: '前端在线考试系统',
+      title: '前端在线答题系统',
       userName: '张三',
       avatarStyle: {
         marginRight: '40px'
