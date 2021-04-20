@@ -114,6 +114,8 @@
 </template>
 
 <script>
+import { isValidEmail, isValidPhone } from '../scripts/functions'
+
 export default {
   name: 'Writeprofile',
   props: {
@@ -157,10 +159,9 @@ export default {
   methods: {
     changeEmail() {
       let newEmail = prompt('请输入新的邮箱：', '')
-      const pattern = /^([A-Za-z0-9_\-.])+@([A-Za-z0-9_\-.])+\.([A-Za-z]{2,4})$/
       let valid = false
       while (newEmail !== null && !valid) {
-        if (!pattern.test(newEmail)) {
+        if (!isValidEmail(newEmail)) {
           newEmail = prompt('邮箱格式有误！\n请重新输入：', '')
         } else {
           this.newEmail = newEmail
@@ -172,7 +173,7 @@ export default {
       let phoneNumber = prompt('请输入手机号：', '')
       let valid = false
       while (phoneNumber !== null && !valid) {
-        if (!(/^1[3456789]\d{9}$/.test(phoneNumber))) {
+        if (!isValidPhone(phoneNumber)) {
           phoneNumber = prompt('手机号格式有误！\n请重新输入：', '')
         } else {
           this.phoneNumber = phoneNumber

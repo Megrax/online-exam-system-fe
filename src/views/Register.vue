@@ -32,56 +32,46 @@
               </td>
             </tr>
             <tr>
-              <td class="remember-me-td">
-                <label
-                  class="remember-me"
-                  for="remember_me"
-                >
-                  <input
-                    type="checkbox"
-                    id="remember_me"
-                    name="data[remember]"
-                    value="1"
-                  />记住帐号
-                </label>
-                <span class="forgot-pass">
-                  <a
-                    href="/auth/password-recovery"
-                    class=""
-                  >忘记密码?
-                  </a>
-                </span>
+              <td>
+                <input
+                  type="password"
+                  name="data[password]"
+                  placeholder="确认密码"
+                  v-model="passwordConfirm"
+                />
               </td>
             </tr>
             <td style="text-align: center">
               <input
                 type="submit"
                 class="login-btn"
-                value="登录"
+                value="注册"
                 @click.prevent="handleSubmit"
               />
             </td>
-            <tr>
-            </tr>
+            <tr></tr>
           </table>
         </form>
-        <div class="login-footer">
-          <span>没有帐号? <a href="">点击注册</a></span>
-        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+// import { isValidEmail } from '../scripts/functions'
+
 export default {
   data() {
     return {
       email: '',
-      password: ''
+      password: '',
+      passwordConfirm: ''
     }
   },
   methods: {
+    formCheck() {
+
+    },
     handleSubmit() {
       const url = 'http://localhost/api/login'
       let data = {
