@@ -1,19 +1,14 @@
 <template>
   <div class="home absolute">
-
     <TopNav></TopNav>
     <main>
-      <Entry
-        class="mt-20 ml-28"
-        :info="startLearning"
-      ></Entry>
-      <Entry
-        class="mt-20 ml-28"
-        :info="checkOutInfo"
-      ></Entry>
+      <Entry class="mt-20 ml-28" :info="startLearning"></Entry>
+      <Entry class="mt-20 ml-28" :info="checkOutInfo"></Entry>
     </main>
-    <a href="localhost/upload.html">
-      <aside class="fixed right-24 bottom-24 flex justify-center items-center w-12 h-12 rounded-full shadow-lg bg-startPractice">
+    <a href="http://101.37.116.37/">
+      <aside
+        class="fixed right-24 bottom-24 flex justify-center items-center w-12 h-12 rounded-full shadow-lg bg-startPractice"
+      >
         <span class="icon-upload text-white text-xl"></span>
       </aside>
     </a>
