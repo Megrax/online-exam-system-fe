@@ -5,7 +5,7 @@
       <Entry class="mt-20 ml-28" :info="startLearning"></Entry>
       <Entry class="mt-20 ml-28" :info="checkOutInfo"></Entry>
     </main>
-    <a href="http://101.37.116.37/">
+    <a href="http://101.37.116.37:8000/">
       <aside
         class="fixed right-24 bottom-24 flex justify-center items-center w-12 h-12 rounded-full shadow-lg bg-startPractice"
       >
