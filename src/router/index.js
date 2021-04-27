@@ -43,9 +43,19 @@ const routes = [
     component: () => import('@/views/ExamRecord.vue')
   },
   {
-    path: '/test/:id',
+    path: '/test/p01',
     name: 'Test',
     component: () => import('@/components/SingleChoice.vue')
+  },
+  {
+    path: '/test/p02',
+    name: 'Test',
+    component: () => import('@/components/Completion.vue')
+  },
+  {
+    path: '/test/p03',
+    name: 'Test',
+    component: () => import('@/components/ShortanswerQuestions.vue')
   },
   {
     path: '/profile',

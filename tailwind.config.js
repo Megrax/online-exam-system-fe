@@ -11,6 +11,9 @@ module.exports = {
       greyText: '#999B9C',
       rightAnswer: '#2a9b26',
       wrongAnswer: '#d33630',
+      },
+      width: {
+        '120': '30rem',
       }
     },
   },
