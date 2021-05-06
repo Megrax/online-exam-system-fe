@@ -10,14 +10,14 @@ const ShowTemplate = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { ShowProfile },
   template:
-    '<show-profile :data="ifEdit" @to-edit="handleToEdit" />',
+    '<show-profile :data="ifEdit" />',
 })
 
 const EditTemplate = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { EditProfile },
   template:
-    '<edit-profile :data="ifEdit" @to-edit="handleToEdit" />',
+    '<edit-profile :data="ifEdit" />',
 })
 
 export const Show = ShowTemplate.bind({})
