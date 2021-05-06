@@ -1,4 +1,5 @@
 import MsgNotification  from '../components/MsgNotification.vue'
+import '@/assets/css/utils.css'
 
 //👇 This default export determines where your story goes in the story list
 export default {
@@ -13,8 +14,8 @@ const Template = (args) => ({
   template: '<MsgNotification v-bind="$props"/>',
 })
 
-export const FirstStory = Template.bind({})
+export const Primary = Template.bind({})
 
-FirstStory.args = {
+Primary.args = {
   /* 👇 The args you need here will depend on your component */
 }
