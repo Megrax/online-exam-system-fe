@@ -1,7 +1,7 @@
 import Loading from '@/components/Loading'
 
 export default {
-    title: 'Loading',
+    title: 'Components/Loading',
     component: Loading
 }
 

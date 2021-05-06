@@ -3,7 +3,7 @@ import '@/assets/css/utils.css'
 
 //👇 This default export determines where your story goes in the story list
 export default {
-  title: 'MsgNotification',
+  title: 'Components/MsgNotification',
   component: MsgNotification,
 }
 

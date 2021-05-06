@@ -1,7 +1,7 @@
 import Entry  from '@/components/Entry'
 
 export default {
-  title: 'Entry',
+  title: 'Components/Entry',
   component: Entry,
 }
 

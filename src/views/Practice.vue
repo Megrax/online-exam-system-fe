@@ -1,11 +1,8 @@
 <template>
   <div>
     <TopNav></TopNav>
-    <ContentDisplay :info='sectionInfo'></ContentDisplay>
-    <Content
-      class="mt-10 ml-36"
-      :info='cardInfo'
-    ></Content>
+    <ContentDisplay :info="sectionInfo"></ContentDisplay>
+    <Content class="mt-10 ml-36" :info="cardInfo"></Content>
   </div>
 </template>
 
@@ -28,7 +25,7 @@ export default {
       },
       cardInfo: {
         title: '前端知识自测',
-        btnTitle: '开始' + '练习',
+        btnTitle: '开始' + '测验',
         btnTarget: '/test/' + 'p01'
       }
     }

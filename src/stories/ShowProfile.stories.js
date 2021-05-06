@@ -2,7 +2,7 @@ import ShowProfile  from '@/components/Showprofile'
 import EditProfile  from '@/components/EditProfile'
 
 export default {
-  title: 'Profile',
+  title: 'Components/Profile',
   component: { ShowProfile , EditProfile},
 }
 

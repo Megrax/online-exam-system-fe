@@ -1,7 +1,7 @@
 import TopNav from '../components/TopNav'
 
 export default {
-    title: 'TopNav',
+    title: 'Components/TopNav',
     component: TopNav
 }
 
