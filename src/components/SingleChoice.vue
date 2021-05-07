@@ -144,7 +144,7 @@ export default {
   mounted() {
     // const url = 'http://feeling.cheerful.today:3000/data'
     // const url = 'http://101.37.116.37:3000/get_questions1'
-    const url = 'http://101.37.116.37:4000/get_random_10questions'
+    const url = 'http://101.37.116.37:8000/api/get-10-random-single-choice-questions'
     fetch(url)
       .then(res => {
         if (res.ok) {
@@ -159,6 +159,7 @@ export default {
         data = this.addSeriesId(data, data.length)
         this.generateUserAnswers()
         this.generateCheckedAnswers()
+        console.log(this.questions)
       })
   },
   methods: {

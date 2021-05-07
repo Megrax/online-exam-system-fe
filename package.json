@@ -7,7 +7,8 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "storybook": "start-storybook -p 6006 -s ./src/assets",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": "npx chromatic --project-token 6456f5d7aa80"
   },
   "dependencies": {
     "@choujiaojiao/vue2-countdown": "^1.0.2",
@@ -33,6 +34,7 @@
     "@vue/cli-service": "~4.5.0",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.2",
+    "chromatic": "^5.8.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
     "vue-loader": "^15.9.6",
