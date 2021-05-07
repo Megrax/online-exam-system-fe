@@ -1,4 +1,4 @@
-import Loading from '@/components/Loading/index.vue'
+import Loading from '@/components/Loading/index'
 
 export default {
     title: 'Components/Loading',
