@@ -2,7 +2,10 @@
   <div>
     <TopNav></TopNav>
     <ContentDisplay :info="sectionInfo"></ContentDisplay>
-    <Content class="mt-10 ml-36" :info="cardInfo"></Content>
+    <div class="flex flex-row flex-nowrap">
+      <Content class="mt-10 ml-36" :info="cardInfo[0]"></Content>
+      <Content class="mt-10 ml-36" :info="cardInfo[1]"></Content>
+    </div>
   </div>
 </template>
 
@@ -23,11 +26,18 @@ export default {
         searchWord: '搜索我的' + '练习',
         bgColor: 'bg-startPractice'
       },
-      cardInfo: {
-        title: '前端知识自测',
-        btnTitle: '开始' + '测验',
-        btnTarget: '/test/' + 'p01'
-      }
+      cardInfo: [
+        {
+          title: '单选题专项训练',
+          btnTitle: '开始' + '练习',
+          btnTarget: '/practice/single-choice'
+        },
+        {
+          title: '填空题专项训练',
+          btnTitle: '开始' + '练习',
+          btnTarget: '/practice/blank-filling'
+        }
+      ]
     }
   },
   components: {
