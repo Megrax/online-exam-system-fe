@@ -5,10 +5,12 @@ import '@/assets/css/iconfonts.css'
 import '@/assets/css/main.css'
 import router from './router'
 import axios from 'axios'
+import Notifications from 'vue-notification'
 
 
 Vue.config.productionTip = false
 Vue.prototype.axios = axios
+Vue.use(Notifications)
 
 new Vue({
   router,

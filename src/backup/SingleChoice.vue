@@ -13,8 +13,6 @@
             class="flex flex-col flex-nowrap items-center justify-around w-48 h-42 pt-4 pb-4 pl-3 pr-3 border shadow-md"
           >
             <div>{{ practiceTitle }}</div>
-            <div>{{ practiceTime }}</div>
-            <div>{{ practiceFullMarks }}</div>
           </li>
           <li
             class="flex flex-col flex-nowrap justify-around items-center w-5/6 min-h-full ml-32 mr-32 border shadow-md"
@@ -42,6 +40,8 @@
                     :value="option.id"
                     v-model="userAnswers[currIndex].answer"
                     id="radio"
+                    @change="handleSelect"
+                    name="option.id"
                   />
                   <span class="ml-5">
                     <span>{{ option.id }}</span>
@@ -54,17 +54,7 @@
           </li>
           <li
             class="flex flex-col flex-nowrap items-center justify-center w-48 h-36"
-          >
-            <p>{{ countdown }}</p>
-            <Countdown
-              :time="3600"
-              :step="1"
-              format="hh:mm:ss"
-              class="text-2xl mt-4"
-            >
-              <template slot-scope="{ time }">{{ time }}</template>
-            </Countdown>
-          </li>
+          ></li>
         </ul>
         <div
           class="flex flex-row flex-nowrap justify-around items-center w-11/12 h-24 mt-8"
@@ -86,13 +76,6 @@
           >
             {{ nextQ }}
           </button>
-          <button
-            class="flex items-center justify-center w-32 h-10 bg-practiceAnalysis text-white"
-            :class="{ 'btn-disabled': currIndex !== questions.length - 1 }"
-            @click="handleSubmit"
-          >
-            {{ submit }}
-          </button>
         </div>
       </main>
       <ul
@@ -113,7 +96,7 @@
 </template>
 
 <script>
-import Countdown from '@choujiaojiao/vue2-countdown'
+// import Countdown from '@choujiaojiao/vue2-countdown'
 import Loading from '@/components/Loading'
 import TopNav from '@/components/TopNav.vue'
 
@@ -132,10 +115,7 @@ export default {
       prevDisabled: false,
       nextDisabled: false,
       submitDisabled: true,
-      practiceTitle: '前端知识自测',
-      practiceTime: '60分钟',
-      practiceFullMarks: '100分',
-      countdown: '剩余时间：',
+      practiceTitle: '单选题专项练习',
       /* 题目信息 */
       questions: [],
       answers: []
@@ -159,7 +139,6 @@ export default {
         data = this.addSeriesId(data, data.length)
         this.generateUserAnswers()
         this.generateCheckedAnswers()
-        console.log(this.questions)
       })
   },
   methods: {
@@ -224,13 +203,17 @@ export default {
     },
     showRightAnswers() {
       for (const [index, question] of this.questions.entries()) {
-        this.answers[index] = question.answer
+        this.answers[index] = question.answer.substr(0, 1) // API 给的 answer 中有时会以 ‘\r’结尾，所以统一取第一个字符
       }
     },
+    handleSelect() {
+      alert(1)
+      this.handleNextClick()
+    }
   },
   components: {
     TopNav,
-    Countdown,
+    // Countdown,
     Loading
   }
 }
