@@ -9,7 +9,7 @@
     </transition>
     <div v-if="fetchSuccess">
       <main class="flex flex-col flex-nowrap justify-center items-center h-96">
-        <ul class="flex flex-row flex-nowrap justify-center items-start w-11/12 min-h-full h-80 mt-48">
+        <ul class="flex flex-row flex-nowrap justify-center items-start w-384 min-h-full h-80 mt-48">
           <li class="flex flex-col flex-nowrap items-center justify-around w-48 h-42 pt-4 pb-4 pl-3 pr-3 border shadow-md">
             <div>{{ practiceTitle }}</div>
           </li>
@@ -49,7 +49,7 @@
             </div>
           </li>
         </ul>
-        <div class="flex flex-row flex-nowrap justify-around items-center w-11/12 h-24 mt-8">
+        <div class="flex flex-row flex-nowrap justify-around items-center w-384 h-24 mt-8 ml-44">
           <button
               class="flex items-center justify-center w-32 h-10 bg-practiceAnalysis text-white"
               :class="{'btn-disabled': (prevDisabled || questionCount === 0)}"
