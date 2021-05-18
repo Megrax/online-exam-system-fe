@@ -13,7 +13,7 @@ module.exports = {
       wrongAnswer: '#d33630',
       },
       width: {
-        '384': '100rem',
+        '128': '36rem',
       }
     },
   },
