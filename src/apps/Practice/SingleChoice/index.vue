@@ -9,10 +9,8 @@
         <ul
           class="flex flex-row flex-nowrap justify-center items-start w-11/12 min-h-full h-80 mt-48"
         >
-          <li
-            class="flex flex-col flex-nowrap items-center justify-around w-48 h-42 pt-4 pb-4 pl-3 pr-3 border shadow-md"
-          >
-            <div>{{ practiceTitle }}</div>
+          <li>
+            <title-board :title="practiceTitle"></title-board>
           </li>
           <li
             class="flex flex-col flex-nowrap justify-around items-center w-5/6 min-h-full ml-32 mr-32 border shadow-md"
@@ -62,19 +60,15 @@
         <div
           class="flex flex-row flex-nowrap justify-around items-center w-11/12 h-24 mt-8"
         >
-          <button
-            class="flex items-center justify-center w-32 h-10 bg-practiceAnalysis text-white"
-            :class="{ 'btn-disabled': questionCount === 0 }"
-            @click="handlePrevClick"
-          >
-            {{ prevQ }}
-          </button>
-          <button
-            class="flex items-center justify-center w-32 h-10 bg-practiceAnalysis text-white"
-            @click="handleNextClick"
-          >
-            {{ nextQ }}
-          </button>
+          <ctl-button
+            :name="prevQ"
+            :isdisabled="prevBtnDisabled"
+            @click.native="handlePrevClick"
+          ></ctl-button>
+          <ctl-button
+            :name="nextQ"
+            @click.native="handleNextClick"
+          ></ctl-button>
         </div>
       </main>
     </div>
@@ -85,6 +79,8 @@
 <script>
 import Loading from '@/components/Loading'
 import TopNav from '@/components/TopNav.vue'
+import CtlButton from '@/components/CtlButton'
+import TitleBoard from '@/components/TitleBoard'
 
 
 export default {
@@ -127,6 +123,11 @@ export default {
         this.questionJudge.fill(false)
         this.storeAnswers()
       })
+  },
+  computed: {
+    prevBtnDisabled: function () {
+      return this.questionCount === 0
+    }
   },
   methods: {
     getQuestion() {
@@ -192,7 +193,9 @@ export default {
   },
   components: {
     TopNav,
-    Loading
+    Loading,
+    CtlButton,
+    TitleBoard
   }
 }
 </script>
